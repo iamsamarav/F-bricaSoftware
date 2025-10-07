@@ -1,0 +1,62 @@
+<nav class="container-fluid">
+
+    <div class="d-flex flex-column flex-shrink-0 ps-3 text-white row flex-nowrap bg-light" style="width: 280px;">
+
+        <div class="sidebar col col-md-12 col-xl-12 px-sm-2 px-0">
+
+            <div class="d-flex flex-column align-items-center align-items-sm-start text-white min-vh-100">
+                <a href=""
+                    class="d-flex align-items-center mb-3 mt-3 mb-md-0 me-md-auto text-black text-decoration-none">
+                    <span class="tw-text-4xl tw-mb-10">Avabank</span>
+                    <p class="mb-4 mx-1">admin</p>
+                </a>
+
+                <hr class="">
+
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="">
+                        <a href="#" class="nav-link link-white rounded
+                        tw-bg-paleta-cor1 tw-text-lg tw-text-white" aria-current="page"
+                            routerLink="/adm-home">Início</a>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded 
+                        tw-text-paleta-cor1 tw-text-lg" routerLink="/adm-form-cadastro">
+                            Cadastrar Cliente
+                        </button>
+                    </li>
+
+                    <li>
+                        <button class="btn btn-toggle align-items-center rounded collapsed pb-2 
+                        tw-text-paleta-cor1 tw-text-lg" data-bs-toggle="collapse" data-bs-target="#duvidas-collapse"
+                            aria-expanded="false">
+                            Dúvidas e Atendimento
+                        </button>
+                        <div class="collapse" id="duvidas-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                <li>
+                                    <a href="" class="rounded tw-text-black hover:tw-text-paleta-cor3"
+                                        routerLink="/central-ajuda">Central de Ajuda</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <hr>
+                <div class="dropdown pb-3">
+                    <a href="" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://i.pinimg.com/736x/51/24/9f/51249f0c2caed9e7c06e4a5453c57857.jpg" alt=""
+                            width="32" height="32" class="rounded-circle me-2">
+                        <strong>Administrador</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                        <li>
+                            <a class="dropdown-item" href="#">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

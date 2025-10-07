@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@angular/animations": "^19.1.4",
+    "@angular/platform-browser": "^19.1.4"
+  }
+}

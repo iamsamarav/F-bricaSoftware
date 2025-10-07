@@ -1,0 +1,52 @@
+<div class="container-fluid vh-100 bg-light d-flex justify-content-center align-items-center p-0">
+  <div class="d-flex" style="width: 900px; height: 600px; overflow: hidden;">
+    <div class="w-50 position-relative" style="background-color: var(--paleta-cor1);">
+      <img
+        src="#"
+        alt="Login Woman"
+        class="position-absolute bottom-0 start-0 w-100"
+        style="object-fit: cover;"
+      />
+    </div>
+
+    <div class="w-50 bg-white d-flex flex-column justify-content-center p-4">
+      <h1 class="text-center fw-bold mb-4" style="color: var(--paleta-cor1); font-size: 1.5rem;">AvaBank</h1>
+
+      <form (ngSubmit)="validar(admin)">
+        <div class="mb-3">
+          <label class="form-label text-secondary">Usuário</label>
+          <input
+            type="text"
+            class="form-control"
+            name="usuario"
+            [(ngModel)]="admin.username"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label text-secondary">Senha</label>
+          <input
+            type="password"
+            class="form-control"
+            name="senha"
+            [(ngModel)]="admin.senha"
+          />
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            class="btn w-100 text-white fw-bold tw-bg-paleta-cor1 hover:tw-bg-paleta-cor1">
+            Entrar
+          </button>
+
+          <p class="text-center mt-3 text-secondary">
+            <a href="#" class="text-decoration-none" style="color: var(--paleta-cor1);">
+              Esqueceu a senha?
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

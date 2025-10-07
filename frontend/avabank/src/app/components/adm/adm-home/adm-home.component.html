@@ -1,0 +1,67 @@
+<section class="tw-container tw-flex tw-justify-center tw-overflow-y-scroll tw-flex-col">
+    <div class="tw-flex tw-max-w-5xl">
+        <div class="tw-flex tw-w-1/2 tw-p-4">
+            <div
+                class="tw-w-full tw-relative tw-bg-white tw-border tw-border-paleta-cor3 tw-rounded-lg tw-shadow-md tw-flex tw-flex-col tw-items-left tw-justify-left tw-p-8">
+                <div class="tw-text-paleta-cor1 tw-font-semibold tw-text-4xl tw-my-4">
+                    Visão geral
+                </div>
+                <div class="tw-text-paleta-cor1 tw-font-bold tw-text-2xl">
+                    {{qtdContas}} contas cadastradas
+                </div>
+
+                <div class="tw-pt-8">
+                    <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-2 tw-pt-3">
+                        1
+                    </span>
+                    <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-2">
+                        Contas especiais
+                    </span>
+                </div>
+                <div>
+                    <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-2 ">
+                        3
+                    </span>
+                    <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-2">
+                        Contas simples
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="tw-flex tw-w-1/2 tw-p-4 ">
+            <div
+                class="tw-w-full tw-relative tw-bg-white tw-border tw-border-paleta-cor3 tw-rounded-lg tw-shadow-md tw-flex tw-flex-col tw-items-center tw-justify-center tw-p-8">
+                <div class="tw-text-paleta-cor1 tw-font-semibold tw-text-4xl tw-my-4">
+                    Gestão de clientes
+                </div>
+                <div>
+                    <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-2 tw-flex tw-text-center">
+                        Crie novas contas e gerencie informações para oferecer uma experiência
+                        completa aos seus clientes
+                    </span>
+                    <app-button-roxo class="tw-text-2xl " titulo="Criar nova conta" router="/adm-form-cadastro"></app-button-roxo>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="tw-text-paleta-cor1 tw-font-bold tw-text-4xl tw-p-4">
+        Lista de contas
+    </div>
+    <div *ngFor="let c of clientes" class="tw-flex tw-w-full tw-px-4 tw-py-1 ">
+        <div
+            class="tw-w-full tw-relative tw-bg-white tw-border tw-border-paleta-cor3 tw-rounded-lg tw-shadow-md tw-flex tw-flex-col tw-items-left tw-justify-left tw-p-2">
+            <div class="tw-text-paleta-cor1 tw-font-semibold  tw-my-4">
+                {{c.nome}}
+            </div>
+            <div class="tw-flex tw-justify-between" *ngFor="let ct of contas" [hidden]="ct.cliente == c.id">
+            <span class="tw-text-paleta-cor3 tw-font-normal tw-text-lg tw-my-1">
+                {{ct.tipo}}
+            </span>
+            <span class="tw-text-paleta-cor3 tw-font-normal tw-text-2 tw-m">
+                {{ct.dataUltimoAcesso}}
+            </span>
+        </div>
+        </div>
+    </div>
+</section>

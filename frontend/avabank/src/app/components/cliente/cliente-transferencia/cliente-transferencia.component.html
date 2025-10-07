@@ -1,0 +1,35 @@
+<div class="tw-w-full tw-h-full tw-flex tw-justify-center tw-items-center tw-flex-col">
+    <div class="tw-w-3/4 tw-h-16">
+        <app-cliente-titulo [titulo]="titulo"></app-cliente-titulo>
+    </div>
+    <div class="tw-p-5">
+        <form action="">
+            <div class="tw-p-2">
+                <label class="tw-p-2 tw-w-1/2" for="">Digite seu CPF</label>
+                <input type="text" name="cpf" [(ngModel)]="transacao.conta" class="tw-bg-paleta-cor9 tw-border tw-border-paleta-cor2 tw-text-paleta-cor8 tw-text-sm tw-rounded-lg focus:tw-ring-paleta-cor1 focus:tw-border-blue-500 block tw-w-full tw-p-2.5 dark:tw-bg-paleta-cor9 dark:tw-border-gray-600 dark:tw-placeholder-gray-400 dark:tw-text-black dark:focus:tw-ring-blue-500 dark:focus:tw-border-blue-500">
+            </div>
+            <div class="tw-p-2">
+                <h1>Para quem você quer enviar?</h1>
+            </div>
+            <div class="tw-flex">
+                <label class="tw-p-2 tw-w-1/2" for="">N° Agencia</label>
+                <input type="text" name="agencia" [(ngModel)]="transacao.agencia" class="tw-bg-paleta-cor9 tw-border tw-border-paleta-cor2 tw-text-paleta-cor8 tw-text-sm tw-rounded-lg focus:tw-ring-paleta-cor1 focus:tw-border-blue-500 block tw-w-full tw-p-2.5 dark:tw-bg-paleta-cor9 dark:tw-border-gray-600 dark:tw-placeholder-paleta-cor8 dark:tw-text-paleta-cor8 dark:focus:tw-ring-blue-500 dark:focus:tw-border-blue-500">
+                <label class="tw-p-2 tw-w-1/2" for="">N° Conta</label>
+                <input type="text" name="numeroConta" [(ngModel)]="transacao.numeroConta" class="tw-bg-paleta-cor9 tw-border tw-border-paleta-cor2 tw-text-paleta-cor8 tw-text-sm tw-rounded-lg focus:tw-ring-paleta-cor1 focus:tw-border-blue-500 block tw-w-full tw-p-2.5 dark:tw-bg-paleta-cor9 dark:tw-border-gray-600 dark:tw-placeholder-paleta-cor8 dark:tw-text-paleta-cor8 dark:focus:tw-ring-blue-500 dark:focus:tw-border-blue-500">
+            </div>
+            <div class="tw-p-2">
+                <label class="tw-p-2 tw-w-1/2" for="">Nome Completo</label>
+                <input type="text" readonly class="tw-bg-paleta-cor9 tw-border tw-border-paleta-cor2 tw-text-paleta-cor8 tw-text-sm tw-rounded-lg focus:tw-ring-paleta-cor1 focus:tw-border-blue-500 block tw-w-full tw-p-2.5 dark:tw-bg-paleta-cor9 dark:tw-border-gray-600 dark:tw-placeholder-gray-400 dark:tw-text-black dark:focus:tw-ring-blue-500 dark:focus:tw-border-blue-500">
+            </div>
+            <div class="tw-p-2">
+                <label class="tw-p-2 tw-w-1/2" for="">Valor</label>
+                <input type="number" name="valor" [(ngModel)]="transacao.valor" class="tw-bg-paleta-cor9 tw-border tw-border-paleta-cor2 tw-text-paleta-cor8 tw-text-sm tw-rounded-lg focus:tw-ring-paleta-cor1 focus:tw-border-blue-500 block tw-w-full tw-p-2.5 dark:tw-bg-paleta-cor9 dark:tw-border-gray-600 dark:tw-placeholder-gray-400 dark:tw-text-black dark:focus:tw-ring-blue-500 dark:focus:tw-border-blue-500">
+            </div>
+            <div class="tw-p-3 tw-flex tw-justify-center">                
+                <button (click)="incluir(transacao)"
+                class="btn btn-rounded btn-lg text-white tw-bg-paleta-cor1 tw-text-base" routerLink="/cliente-confirmar-pag">
+                Avançar</button>
+            </div>
+        </form>
+    </div>
+</div>
