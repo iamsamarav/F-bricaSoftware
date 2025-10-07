@@ -34,5 +34,4 @@ public class AdministradorService {
 		return administradorRepository.findById(id)
 		        .orElseThrow(() -> new EntityNotFoundException("Administrador não encontrado para o ID: " + id));
 	}
-
 }
