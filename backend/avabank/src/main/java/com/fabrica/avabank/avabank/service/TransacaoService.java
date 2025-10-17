@@ -1,19 +1,22 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.common.RandomStrGenerator;
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.entities.Transacao;
-import com.avanade.avabank.avabank.enumeracoes.TipoPix;
-import com.avanade.avabank.avabank.enumeracoes.TipoTransacao;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
-import com.avanade.avabank.avabank.repositories.TransacaoRepository;
+import com.fabrica.avabank.avabank.common.RandomStrGenerator;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.entities.Transacao;
+import com.fabrica.avabank.avabank.entities.ChavePix;
+import com.fabrica.avabank.avabank.enumeracoes.TipoPix;
+import com.fabrica.avabank.avabank.enumeracoes.TipoTransacao;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.repositories.TransacaoRepository;
+import com.fabrica.avabank.avabank.repositories.ChavePixRepository;
 
 @Service
 public class TransacaoService {
@@ -23,6 +26,9 @@ public class TransacaoService {
 
 	@Autowired
 	private ContaRepository contaRepository;
+	
+	@Autowired
+	private ChavePixRepository chavePixRepository;
 
 	public Transacao incluirDeposito(Map<String, String> dados) {
 
@@ -67,7 +73,6 @@ public class TransacaoService {
 	}
 
 	public Transacao pagarPix(Map<String, String> dados) {
-
 		RandomStrGenerator generator = new RandomStrGenerator();
 
 		Conta conta = contaRepository.getReferenceById(Integer.parseInt(dados.get("idConta")));
@@ -75,7 +80,15 @@ public class TransacaoService {
 		double valor = Double.parseDouble(dados.get("valor"));
 		Date dataTransacao = new Date();
 		String numeroProtocolo = generator.usingRandomUUID();
+		String chaveDestino = dados.get("chaveDestino");
 		TipoPix tipoPix = TipoPix.doValor(dados.get("tipoPix"));
+
+		// Buscar conta de destino pela chave PIX
+		Optional<ChavePix> chavePixOpt = chavePixRepository.findByChave(chaveDestino);
+		Integer idContaDestino = null;
+		if (chavePixOpt.isPresent()) {
+			idContaDestino = chavePixOpt.get().getConta().getId();
+		}
 
 		Transacao transacao = new Transacao();
 		transacao.setConta(conta);
@@ -84,8 +97,9 @@ public class TransacaoService {
 		transacao.setDataTransacao(dataTransacao);
 		transacao.setNumeroProtocolo(numeroProtocolo);
 		transacao.setDescricao(dados.get("descricao"));
-		transacao.setChaveDestino(dados.get("chaveDestino"));
+		transacao.setChaveDestino(chaveDestino);
 		transacao.setTipoPix(tipoPix);
+		transacao.setIdContaDestino(idContaDestino);
 
 		return transacaoRepository.save(transacao);
 	}
@@ -128,16 +142,14 @@ public class TransacaoService {
 	}
 	
 	public Transacao incluirTransferencia(Map<String, String> dados) {
-
 		RandomStrGenerator generator = new RandomStrGenerator();
 
-		Conta conta = contaRepository.findByContaByCPF(dados.get("cpf"));
+		Conta conta = contaRepository.getReferenceById(Integer.parseInt(dados.get("idConta")));
 		TipoTransacao tipoTransacao = TipoTransacao.doValor(dados.get("tipoTransacao"));
 		double valor = Double.parseDouble(dados.get("valor"));
 		Date dataTransacao = new Date();
 		String numeroProtocolo = generator.usingRandomUUID();
-		
-		int idConta = contaRepository.findByNumeroAndAgencia(dados.get("numeroConta"),dados.get("agencia"));
+		Integer idContaDestino = Integer.parseInt(dados.get("idContaDestino"));
 
 		Transacao transacao = new Transacao();
 		transacao.setConta(conta);
@@ -146,7 +158,7 @@ public class TransacaoService {
 		transacao.setDataTransacao(dataTransacao);
 		transacao.setNumeroProtocolo(numeroProtocolo);
 		transacao.setDescricao(dados.get("descricao"));
-		transacao.setIdContaDestino(idConta);
+		transacao.setIdContaDestino(idContaDestino);
 
 		return transacaoRepository.save(transacao);
 	}

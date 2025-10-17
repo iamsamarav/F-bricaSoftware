@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.controllers;
+package com.fabrica.avabank.avabank.controllers;
 
 import java.util.Date;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avanade.avabank.avabank.dtos.ExtratoDTO;
-import com.avanade.avabank.avabank.service.ExtratoService;
+import com.fabrica.avabank.avabank.dtos.ExtratoDTO;
+import com.fabrica.avabank.avabank.service.ExtratoService;
 
 @RestController
 @RequestMapping("/extratos")

@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.controllers;
+package com.fabrica.avabank.avabank.controllers;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avanade.avabank.avabank.entities.Agencia;
-import com.avanade.avabank.avabank.service.AgenciaService;
+import com.fabrica.avabank.avabank.entities.Agencia;
+import com.fabrica.avabank.avabank.service.AgenciaService;
 
 @RestController
 @RequestMapping("/agencias")

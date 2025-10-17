@@ -1,14 +1,14 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.entities.Administrador;
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.repositories.AdministradorRepository;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.entities.Administrador;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.repositories.AdministradorRepository;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
 
 @Service
 public class UsuarioService {

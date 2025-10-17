@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.dtos.ClienteDTO;
-import com.avanade.avabank.avabank.entities.Cliente;
-import com.avanade.avabank.avabank.entities.Endereco;
-import com.avanade.avabank.avabank.repositories.ClienteRepository;
-import com.avanade.avabank.avabank.security.JwtUtil;
+import com.fabrica.avabank.avabank.dtos.ClienteDTO;
+import com.fabrica.avabank.avabank.entities.Cliente;
+import com.fabrica.avabank.avabank.entities.Endereco;
+import com.fabrica.avabank.avabank.repositories.ClienteRepository;
+import com.fabrica.avabank.avabank.security.JwtUtil;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 

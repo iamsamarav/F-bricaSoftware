@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.repositories;
+package com.fabrica.avabank.avabank.repositories;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.avanade.avabank.avabank.dtos.ContaDTO;
-import com.avanade.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.dtos.ContaDTO;
+import com.fabrica.avabank.avabank.entities.Conta;
 
 @Repository
 public interface ContaRepository extends JpaRepository<Conta, Integer> {

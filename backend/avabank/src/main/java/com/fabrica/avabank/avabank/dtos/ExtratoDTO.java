@@ -1,9 +1,9 @@
 
-package com.avanade.avabank.avabank.dtos;
+package com.fabrica.avabank.avabank.dtos;
 
 import java.util.Date;
 
-import com.avanade.avabank.avabank.enumeracoes.TipoTransacao;
+import com.fabrica.avabank.avabank.enumeracoes.TipoTransacao;
 
 public class ExtratoDTO {
 	

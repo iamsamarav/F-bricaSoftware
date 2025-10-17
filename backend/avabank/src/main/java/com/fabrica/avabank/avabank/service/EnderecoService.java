@@ -1,9 +1,9 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.avanade.avabank.avabank.entities.Endereco;
+import com.fabrica.avabank.avabank.entities.Endereco;
 
 @Service
 public class EnderecoService {

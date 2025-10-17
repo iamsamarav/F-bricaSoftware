@@ -1,9 +1,9 @@
-package com.avanade.avabank.avabank.dtos;
+package com.fabrica.avabank.avabank.dtos;
 
 import java.util.Date;
 
-import com.avanade.avabank.avabank.entities.Cliente;
-import com.avanade.avabank.avabank.entities.Endereco;
+import com.fabrica.avabank.avabank.entities.Cliente;
+import com.fabrica.avabank.avabank.entities.Endereco;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;

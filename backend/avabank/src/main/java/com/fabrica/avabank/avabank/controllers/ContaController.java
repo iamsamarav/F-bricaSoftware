@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.controllers;
+package com.fabrica.avabank.avabank.controllers;
 
 import java.util.List;
 import java.util.Map;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.avanade.avabank.avabank.dtos.ContaDTO;
-import com.avanade.avabank.avabank.entities.Cliente;
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.service.ContaService;
+import com.fabrica.avabank.avabank.dtos.ContaDTO;
+import com.fabrica.avabank.avabank.entities.Cliente;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.service.ContaService;
 
 @RestController
 @RequestMapping("/contas")

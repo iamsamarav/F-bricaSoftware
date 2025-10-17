@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.config;
+package com.fabrica.avabank.avabank.config;
 
 import java.util.Arrays;
 
@@ -19,12 +19,12 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import com.avanade.avabank.avabank.repositories.AdministradorRepository;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
-import com.avanade.avabank.avabank.security.JwtAuthenticationFilter;
-import com.avanade.avabank.avabank.security.JwtAuthorizationFilter;
-import com.avanade.avabank.avabank.security.JwtUtil;
-import com.avanade.avabank.avabank.service.UsuarioService;
+import com.fabrica.avabank.avabank.repositories.AdministradorRepository;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.security.JwtAuthenticationFilter;
+import com.fabrica.avabank.avabank.security.JwtAuthorizationFilter;
+import com.fabrica.avabank.avabank.security.JwtUtil;
+import com.fabrica.avabank.avabank.service.UsuarioService;
 
 @Configuration
 @EnableWebSecurity

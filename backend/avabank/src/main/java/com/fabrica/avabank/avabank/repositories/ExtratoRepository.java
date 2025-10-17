@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.repositories;
+package com.fabrica.avabank.avabank.repositories;
 
 import java.util.Date;
 import java.util.List;
@@ -7,13 +7,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import com.avanade.avabank.avabank.dtos.ExtratoDTO;
-import com.avanade.avabank.avabank.entities.Extrato;
-import com.avanade.avabank.avabank.enumeracoes.TipoTransacao;
+import com.fabrica.avabank.avabank.dtos.ExtratoDTO;
+import com.fabrica.avabank.avabank.entities.Extrato;
+import com.fabrica.avabank.avabank.enumeracoes.TipoTransacao;
 
 public interface ExtratoRepository extends JpaRepository<Extrato, Integer>{
 	
-	@Query("SELECT new com.avanade.avabank.avabank.dtos.ExtratoDTO("
+	@Query("SELECT new com.fabrica.avabank.avabank.dtos.ExtratoDTO("
 	           + " e.conta.numero, "
 	           + " cl.nome," 
 	           + " t.tipoTransacao, "
@@ -28,7 +28,7 @@ public interface ExtratoRepository extends JpaRepository<Extrato, Integer>{
 	           + " JOIN e.transacao t")
 	public List<ExtratoDTO> listarExtratosDTO();
 	
-	@Query("SELECT new com.avanade.avabank.avabank.dtos.ExtratoDTO("
+	@Query("SELECT new com.fabrica.avabank.avabank.dtos.ExtratoDTO("
 			+ " e.conta.numero, "
 			+ " cl.nome," 
 			+ " t.tipoTransacao, "
@@ -40,12 +40,12 @@ public interface ExtratoRepository extends JpaRepository<Extrato, Integer>{
 			+ " FROM Extrato e "
 			+ " JOIN e.conta c "
 			+ " JOIN c.cliente cl "
-			+ " JOIN e.transacao t"
+			+ " JOIN e.transacao t "
 			+ " WHERE e.conta.numero = :numeroConta")
-	public List<ExtratoDTO> listarExtratosDTOPorConta(@Param("numeroConta") long numero);
+	public List<ExtratoDTO> listarExtratosDTOPorConta(@Param("numeroConta") long numeroConta);
 
 	
-	@Query("SELECT new com.avanade.avabank.avabank.dtos.ExtratoDTO("
+	@Query("SELECT new com.fabrica.avabank.avabank.dtos.ExtratoDTO("
 	        + " e.conta.numero, "
 	        + " cl.nome," 
 	        + " t.tipoTransacao, "
@@ -62,7 +62,7 @@ public interface ExtratoRepository extends JpaRepository<Extrato, Integer>{
 	public List<ExtratoDTO> listarExtratosDTOPorData(@Param("dataInicio") Date dataInicio, @Param("dataFinal") Date dataFinal);
 
 	
-	@Query("SELECT new com.avanade.avabank.avabank.dtos.ExtratoDTO("
+	@Query("SELECT new com.fabrica.avabank.avabank.dtos.ExtratoDTO("
 	        + " e.conta.numero, "
 	        + " cl.nome," 
 	        + " t.tipoTransacao, "

@@ -1,9 +1,9 @@
-package com.avanade.avabank.avabank.entities;
+package com.fabrica.avabank.avabank.entities;
 
 import java.util.Date;
 
-import com.avanade.avabank.avabank.enumeracoes.TipoPix;
-import com.avanade.avabank.avabank.enumeracoes.TipoTransacao;
+import com.fabrica.avabank.avabank.enumeracoes.TipoPix;
+import com.fabrica.avabank.avabank.enumeracoes.TipoTransacao;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;

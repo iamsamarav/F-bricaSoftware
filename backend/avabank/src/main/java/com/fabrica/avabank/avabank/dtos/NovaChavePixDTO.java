@@ -1,6 +1,6 @@
-package com.avanade.avabank.avabank.dtos;
+package com.fabrica.avabank.avabank.dtos;
 
-import com.avanade.avabank.avabank.enumeracoes.TipoPix;
+import com.fabrica.avabank.avabank.enumeracoes.TipoPix;
 
 public class NovaChavePixDTO {
 	private int idConta;

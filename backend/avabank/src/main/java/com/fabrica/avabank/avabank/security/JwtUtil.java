@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.security;
+package com.fabrica.avabank.avabank.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

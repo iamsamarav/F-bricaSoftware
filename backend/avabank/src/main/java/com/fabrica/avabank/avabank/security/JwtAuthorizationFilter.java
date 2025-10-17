@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.security;
+package com.fabrica.avabank.avabank.security;
 
 import java.io.IOException;
 

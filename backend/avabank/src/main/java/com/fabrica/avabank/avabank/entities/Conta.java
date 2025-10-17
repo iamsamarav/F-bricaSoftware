@@ -1,10 +1,10 @@
-package com.avanade.avabank.avabank.entities;
+package com.fabrica.avabank.avabank.entities;
 
 import java.util.Date;
 import java.util.List;
 
-import com.avanade.avabank.avabank.enumeracoes.SituacaoConta;
-import com.avanade.avabank.avabank.enumeracoes.TipoConta;
+import com.fabrica.avabank.avabank.enumeracoes.SituacaoConta;
+import com.fabrica.avabank.avabank.enumeracoes.TipoConta;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.annotation.Nullable;

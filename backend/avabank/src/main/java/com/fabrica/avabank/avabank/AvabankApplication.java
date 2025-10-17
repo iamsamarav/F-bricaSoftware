@@ -1,14 +1,12 @@
-package com.avanade.avabank.avabank;
+package com.fabrica.avabank.avabank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.avanade.avabank.avabank.entities.Cliente;
-
-@SpringBootApplication(scanBasePackages = "com.avanade.avabank")
+@SpringBootApplication(scanBasePackages = "com.fabrica.avabank")
 public class AvabankApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AvabankApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AvabankApplication.class, args);
+    }
 }

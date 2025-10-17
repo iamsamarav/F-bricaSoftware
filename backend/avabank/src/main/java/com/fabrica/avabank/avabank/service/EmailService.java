@@ -1,12 +1,12 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.entities.Cliente;
-import com.avanade.avabank.avabank.repositories.ClienteRepository;
+import com.fabrica.avabank.avabank.entities.Cliente;
+import com.fabrica.avabank.avabank.repositories.ClienteRepository;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;

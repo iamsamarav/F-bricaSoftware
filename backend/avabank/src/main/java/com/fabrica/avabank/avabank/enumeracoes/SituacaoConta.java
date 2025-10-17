@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.enumeracoes;
+package com.fabrica.avabank.avabank.enumeracoes;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

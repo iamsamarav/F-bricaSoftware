@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.entities;
+package com.fabrica.avabank.avabank.entities;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -10,7 +10,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.avanade.avabank.avabank.enumeracoes.SituacaoConta;
+import com.fabrica.avabank.avabank.enumeracoes.SituacaoConta;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;

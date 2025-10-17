@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.security;
+package com.fabrica.avabank.avabank.security;
 
 import java.io.IOException;
 import java.util.Date;
@@ -15,12 +15,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.avanade.avabank.avabank.dtos.AdminLoginDTO;
-import com.avanade.avabank.avabank.dtos.ClienteLoginDTO;
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.repositories.AdministradorRepository;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
-import com.avanade.avabank.avabank.service.UsuarioService;
+import com.fabrica.avabank.avabank.dtos.AdminLoginDTO;
+import com.fabrica.avabank.avabank.dtos.ClienteLoginDTO;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.repositories.AdministradorRepository;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.service.UsuarioService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import jakarta.servlet.FilterChain;

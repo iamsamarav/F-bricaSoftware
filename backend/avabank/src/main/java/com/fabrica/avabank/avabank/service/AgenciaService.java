@@ -1,12 +1,12 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.entities.Agencia;
-import com.avanade.avabank.avabank.repositories.AgenciaRepository;
+import com.fabrica.avabank.avabank.entities.Agencia;
+import com.fabrica.avabank.avabank.repositories.AgenciaRepository;
 
 @Service
 public class AgenciaService {

@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.dtos;
+package com.fabrica.avabank.avabank.dtos;
 
 public class ClienteLoginDTO {
 	

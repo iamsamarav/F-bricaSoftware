@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.common;
+package com.fabrica.avabank.avabank.common;
 
 import java.util.UUID;
 

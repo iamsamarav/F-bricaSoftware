@@ -1,13 +1,13 @@
-package com.avanade.avabank.avabank.security;
+package com.fabrica.avabank.avabank.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.repositories.AdministradorRepository;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.repositories.AdministradorRepository;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
 
 @Service
 public class UsuarioDetalheImpl implements UserDetailsService{

@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.text.ParseException;
 import java.util.List;
@@ -7,13 +7,13 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.common.RandomStrGenerator;
-import com.avanade.avabank.avabank.dtos.ChavePixDTO;
-import com.avanade.avabank.avabank.entities.ChavePix;
-import com.avanade.avabank.avabank.entities.Conta;
-import com.avanade.avabank.avabank.enumeracoes.TipoPix;
-import com.avanade.avabank.avabank.repositories.ChavePixRepository;
-import com.avanade.avabank.avabank.repositories.ContaRepository;
+import com.fabrica.avabank.avabank.common.RandomStrGenerator;
+import com.fabrica.avabank.avabank.dtos.ChavePixDTO;
+import com.fabrica.avabank.avabank.entities.ChavePix;
+import com.fabrica.avabank.avabank.entities.Conta;
+import com.fabrica.avabank.avabank.enumeracoes.TipoPix;
+import com.fabrica.avabank.avabank.repositories.ChavePixRepository;
+import com.fabrica.avabank.avabank.repositories.ContaRepository;
 
 @Service
 public class ChavePixService {

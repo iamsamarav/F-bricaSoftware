@@ -1,6 +1,6 @@
-package com.avanade.avabank.avabank.dtos;
+package com.fabrica.avabank.avabank.dtos;
 
-import com.avanade.avabank.avabank.entities.Endereco;
+import com.fabrica.avabank.avabank.entities.Endereco;
 
 public class EnderecoDTO {
 	private String cep;

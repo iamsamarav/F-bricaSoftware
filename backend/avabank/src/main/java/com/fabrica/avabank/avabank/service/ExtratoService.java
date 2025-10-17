@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.service;
+package com.fabrica.avabank.avabank.service;
 
 import java.util.Date;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.avanade.avabank.avabank.dtos.ExtratoDTO;
-import com.avanade.avabank.avabank.entities.Extrato;
-import com.avanade.avabank.avabank.enumeracoes.TipoTransacao;
-import com.avanade.avabank.avabank.repositories.ExtratoRepository;
+import com.fabrica.avabank.avabank.dtos.ExtratoDTO;
+import com.fabrica.avabank.avabank.entities.Extrato;
+import com.fabrica.avabank.avabank.enumeracoes.TipoTransacao;
+import com.fabrica.avabank.avabank.repositories.ExtratoRepository;
 
 @Service
 public class ExtratoService {

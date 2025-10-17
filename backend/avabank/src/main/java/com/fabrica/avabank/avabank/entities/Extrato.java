@@ -1,4 +1,4 @@
-package com.avanade.avabank.avabank.entities;
+package com.fabrica.avabank.avabank.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
